@@ -24,6 +24,10 @@ const options = {
 }
 app.use(cors(options))
 
+app.get("/api", (_req, res)=>{
+     res.send("Hola desde mi servidor de Express!!")
+})
+
 routerApi(app);
 
 app.use(boomErrorHandler)
